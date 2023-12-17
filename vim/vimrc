@@ -1,0 +1,39 @@
+""" Thema
+filetype plugin indent on
+syntax on
+set laststatus=2
+set title
+set encoding=utf-8
+set splitbelow
+set splitright
+
+set path=.,**
+set noswapfile
+set nobackup
+
+set undodir=/.vim/undordir
+set undofile
+
+let $RCPATH = '~/.vim/'
+let $RC = $RCPATH.'vimrc'
+
+set nu!
+set autoindent
+set wildmenu
+set confirm
+
+""" Highlight in patterns
+set incsearch
+set hlsearch
+
+set wildmenu
+set wildmode=longest,full
+set completeopt=menuone,longest
+set shortmess+=c
+
+""" keys path
+map q :quit<CR>
+map <C-s> :w<CR>
+"" Clean search
+map cs :let @/=''<CR>
+
