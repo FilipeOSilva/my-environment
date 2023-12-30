@@ -1,6 +1,10 @@
-""" Thema
+if has('termguicolors')
+	set termguicolors
+endif
+
 filetype plugin indent on
 syntax on
+set noshowmode
 set laststatus=2
 set title
 set encoding=utf-8
@@ -22,7 +26,7 @@ set autoindent
 set wildmenu
 set confirm
 
-""" Highlight in patterns
+" Highlight in patterns
 set incsearch
 set hlsearch
 
@@ -31,9 +35,12 @@ set wildmode=longest,full
 set completeopt=menuone,longest
 set shortmess+=c
 
-""" keys path
+" keys path
 map q :quit<CR>
 map <C-s> :w<CR>
-"" Clean search
+
+" Clean search
 map cs :let @/=''<CR>
 
+execute 'source '.$RCPATH.fnameescape('customcolors.vim')
+execute 'source '.$RCPATH.fnameescape('statusbar.vim')
