@@ -14,7 +14,8 @@ export PATH=$PATH:~/.local/bin/scripts/bash/
 #eval "$(pyenv init -)"
 
 # Bind
-bind '"\C-r"':"\"history | fzf\C-m\""
+#bind '"\C-r"':"\"history | fzf\C-m\""
+bind '"\C-r": "history | fzf | awk \x27{ $1=\x22\x22; print substr($0,2) }\x27; \C-m"'
 
 # Alias
 alias ips='ip -c -br a'
