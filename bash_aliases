@@ -21,6 +21,8 @@ bind '"\C-r": "history | fzf | awk \x27{ $1=\x22\x22; print substr($0,2) }\x27; 
 alias ips='ip -c -br a'
 alias update='sudo apt update && sudo apt upgrade'
 alias pstree='pstree -npTC age'
+alias code='codium'
+alias gitlog='git log --all --graph --oneline'
 
 # Functions Alias
 remote_wireshark() {
